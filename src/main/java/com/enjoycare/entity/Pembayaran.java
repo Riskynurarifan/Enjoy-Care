@@ -14,7 +14,7 @@ public class Pembayaran {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pembayaran")
-    private Integer idPembayaran;
+    private Long idPembayaran;
 
     @Column(name = "kode_pembayaran", nullable = false, unique = true)
     private String kodePembayaran;
@@ -45,8 +45,8 @@ public class Pembayaran {
     public Pembayaran() {
     }
 
-    public Integer getIdPembayaran() { return idPembayaran; }
-    public void setIdPembayaran(Integer idPembayaran) { this.idPembayaran = idPembayaran; }
+    public Long getIdPembayaran() { return idPembayaran; }
+    public void setIdPembayaran(Long idPembayaran) { this.idPembayaran = idPembayaran; }
 
     public String getKodePembayaran() { return kodePembayaran; }
     public void setKodePembayaran(String kodePembayaran) { this.kodePembayaran = kodePembayaran; }

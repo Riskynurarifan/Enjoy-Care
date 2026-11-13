@@ -102,10 +102,7 @@ public class Dashboard extends JFrame {
         addNav(side, "orders", "Pesanan & Teknisi");
         addNav(side, "payment", "Pembayaran");
 
-        if (isOwner()) {
-            addNav(side, "report", "Laporan");
-            addNav(side, "settings", "Pengguna");
-        }
+        addNav(side, "report", "Laporan");
 
         side.add(Box.createVerticalGlue());
 
@@ -284,7 +281,6 @@ public class Dashboard extends JFrame {
             case "Pesanan & Teknisi": return "orders";
             case "Pembayaran": return "payment";
             case "Laporan": return "report";
-            case "Pengguna": return "settings";
             default: return "dashboard";
         }
     }
@@ -482,12 +478,12 @@ public class Dashboard extends JFrame {
                     return;
                 }
                 page = new LayananPage(true);
-                subtitle = "Kelola jenis dan harga layanan.";
+                subtitle = "Kelola layanan, teknisi, dan stok barang.";
                 break;
 
             case "Pesanan & Teknisi":
                 page = new PesananTeknisiPage(isOwner());
-                subtitle = "Kelola pesanan dan data teknisi.";
+                subtitle = "Kelola pesanan beserta informasi teknisi.";
                 break;
 
             case "Pembayaran":
@@ -496,21 +492,8 @@ public class Dashboard extends JFrame {
                 break;
 
             case "Laporan":
-                if (!isOwner()) {
-                    denied();
-                    return;
-                }
                 page = new LaporanPage();
-                subtitle = "Laporan keuangan EnjoyCare.";
-                break;
-
-            case "Pengguna":
-                if (!isOwner()) {
-                    denied();
-                    return;
-                }
-                page = new PenggunaPage();
-                subtitle = "Kelola akun pengguna aplikasi.";
+                subtitle = "Lihat dan cetak bukti pesanan pelanggan.";
                 break;
 
             default:

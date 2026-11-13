@@ -1,4 +1,3 @@
-
 package com.enjoycare.entity;
 
 import javax.persistence.*;
@@ -12,7 +11,7 @@ public class Pengguna {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pengguna")
-    private Integer idPengguna;
+    private Long idPengguna;
 
     @Column(name = "username", nullable = false, unique = true)
     private String username;
@@ -36,8 +35,8 @@ public class Pengguna {
     public Pengguna() {
     }
 
-    public Integer getIdPengguna() { return idPengguna; }
-    public void setIdPengguna(Integer idPengguna) { this.idPengguna = idPengguna; }
+    public Long getIdPengguna() { return idPengguna; }
+    public void setIdPengguna(Long idPengguna) { this.idPengguna = idPengguna; }
 
     public String getUsername() { return username; }
     public void setUsername(String username) { this.username = username; }

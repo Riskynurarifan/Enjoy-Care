@@ -23,9 +23,13 @@
         <!-- Entity Database -->
         <mapping class="com.enjoycare.entity.Pelanggan"/>
         <mapping class="com.enjoycare.entity.Layanan"/>
+        <mapping class="com.enjoycare.entity.Teknisi"/>
         <mapping class="com.enjoycare.entity.Pesanan"/>
+        <mapping class="com.enjoycare.entity.DetailPesanan"/>
         <mapping class="com.enjoycare.entity.Pembayaran"/>
         <mapping class="com.enjoycare.entity.Pengguna"/>
+        <mapping class="com.enjoycare.entity.StokBarang"/>
+        <mapping class="com.enjoycare.entity.PenggunaanStok"/>
 
     </session-factory>
 </hibernate-configuration>
